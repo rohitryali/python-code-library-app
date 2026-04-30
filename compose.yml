@@ -11,7 +11,7 @@ services:
     ports:
       - "5001:5001"
     deploy:
-      replicas: 1
+      replicas: 3
     depends_on:
       - db
   book_service:
@@ -19,7 +19,7 @@ services:
     ports:
       - "5002:5002"
     deploy:
-      replicas: 1
+      replicas: 3
     depends_on:
       - db
   borrow_service:
@@ -27,7 +27,7 @@ services:
     ports:
       - "5003:5003"
     deploy:
-      replicas: 1
+      replicas: 3
     depends_on:
       - db
   app_service:
@@ -35,7 +35,7 @@ services:
     ports:
       - "5000:5000"
     deploy:
-      replicas: 1
+      replicas: 3
     depends_on:
       - auth_service
       - book_service
